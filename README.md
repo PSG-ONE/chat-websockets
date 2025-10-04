@@ -1,4 +1,6 @@
-![Demo del Chat](./screenshot.png)
+<p align="center">
+  <img src="./Estudio%20shonos.png" alt="Chat con WebSockets" width="100%"/>
+</p>
 
 
 # 💬 Chat en Tiempo Real – WebSocket Demo
