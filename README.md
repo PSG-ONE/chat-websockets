@@ -5,8 +5,16 @@
 
 # 💬 Chat en Tiempo Real – WebSocket Demo
 
-Un chat en tiempo real simple construido con **Node.js, Express y WebSocket**.  
-El objetivo principal es demostrar la comunicación bidireccional entre cliente y servidor, ideal como proyecto de práctica o portafolio.
+Un proyecto de **chat en tiempo real** construido con **Node.js, Express y WebSocket**, desarrollado como ejercicio práctico para comprender la comunicación bidireccional entre cliente y servidor.
+
+Este proyecto está pensado para:
+- **Aprender WebSockets**: entender cómo funciona la comunicación en tiempo real.
+- **Practicar despliegue**: tanto en servidores locales como en la nube (Render).
+- **Explorar integración de Docker**: con un contenedor simple para levantar el servicio.
+- **Construir un portafolio técnico**: mostrando un ejemplo claro de aplicación web dinámica.
+
+La aplicación ofrece una interfaz web sencilla con login de prueba (usuario fijo) y un chat en vivo entre clientes conectados. Su objetivo no es la seguridad ni la escalabilidad de producción, sino servir como **demo formativa** y **base para proyectos más avanzados**.
+
 
 ---
 
