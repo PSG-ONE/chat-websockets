@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="" alt="Chat con WebSockets" width="100%"/>
+  <img src="banner.png" alt="Chat con WebSockets" width="100%"/>
 </p>
 
 
