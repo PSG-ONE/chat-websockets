@@ -1,3 +1,6 @@
+![Demo del Chat](./screenshot.png)
+
+
 # 💬 P2P Chat – WebSocket Demo
 
 Un chat en tiempo real simple construido con **Node.js, Express y WebSocket**.  
