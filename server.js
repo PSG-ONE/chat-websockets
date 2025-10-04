@@ -4,17 +4,16 @@ const WebSocket = require("ws");
 const path = require("path");
 
 const PORT = process.env.PORT || 3000;
+
 const app = express();
 
-// 1. Servir client.html en la raíz
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "client.html"));
-});
+// Servir el archivo client.html
+app.use(express.static(path.join(__dirname)));
 
-// 2. Crear servidor HTTP con Express
+// Crear servidor HTTP con Express
 const server = http.createServer(app);
 
-// 3. Crear servidor WebSocket sobre el mismo HTTP
+// Crear servidor WebSocket sobre el mismo HTTP
 const wss = new WebSocket.Server({ server });
 
 wss.on("connection", (ws) => {
@@ -22,7 +21,8 @@ wss.on("connection", (ws) => {
 
   ws.on("message", (msg) => {
     console.log("Mensaje recibido:", msg.toString());
-    // reenviar a todos
+
+    // reenviar mensaje a todos los clientes conectados
     wss.clients.forEach((client) => {
       if (client.readyState === WebSocket.OPEN) {
         client.send(msg.toString());
@@ -35,7 +35,7 @@ wss.on("connection", (ws) => {
   });
 });
 
-// 4. Escuchar en Render
+// Escuchar en el puerto que Render asigne
 server.listen(PORT, () => {
   console.log(`Servidor corriendo en puerto ${PORT}`);
 });
