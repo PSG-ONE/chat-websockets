@@ -69,9 +69,9 @@ http://localhost:3000/client.html
 🌐 Despliegue en Render
 
 Este proyecto fue desplegado en Render como Web Service.
-
-👉 Demo activa: P2P Chat en Render
-
+```bash
+https://p2p-chat-tdde.onrender.com/client.html
+```
 ⚠️ Nota: Render apaga el servicio después de un tiempo de inactividad, por lo que la primera carga puede tardar unos segundos.
 
 Credenciales de prueba:
