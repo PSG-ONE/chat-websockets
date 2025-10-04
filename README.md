@@ -84,3 +84,6 @@ Contraseña: 1234
 
 Este proyecto está bajo la licencia MIT.
 Puedes usarlo, copiarlo o modificarlo libremente con fines educativos o profesionales.
+```
+https://github.com/PSG-ONE/p2p-chat/blob/main/LICENSE
+```
