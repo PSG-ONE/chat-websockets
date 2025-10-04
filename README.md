@@ -1,7 +1,7 @@
 ![Demo del Chat](./screenshot.png)
 
 
-# 💬 P2P Chat – WebSocket Demo
+# 💬 Chat en Tiempo Real – WebSocket Demo
 
 Un chat en tiempo real simple construido con **Node.js, Express y WebSocket**.  
 El objetivo principal es demostrar la comunicación bidireccional entre cliente y servidor, ideal como proyecto de práctica o portafolio.
@@ -23,6 +23,13 @@ El objetivo principal es demostrar la comunicación bidireccional entre cliente 
 - Express
 - WebSocket (ws)
 - HTML / CSS / JS
+
+## 💻 Herramientas utilizadas
+
+- Cursor – IDE con IA integrado, usado para crear y refactorizar el código.
+- GitHub – Control de versiones y hosting del repositorio.
+- Render – Despliegue del proyecto como servicio web.
+- Docker (opcional) – Contenerización para ejecución local.
 
 ---
 ## 📂 Estructura del proyecto
