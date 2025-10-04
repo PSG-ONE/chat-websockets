@@ -17,15 +17,10 @@
   <button onclick="sendMessage()">Enviar</button>
 
   <script>
-    const ws = new WebSocket("wss://p2p-chat-tdde.onrender.com");
+    const ws = new WebSocket("wss://" + window.location.host);
 
-    ws.onopen = () => {
-      addMessage("✅ Conectado al servidor");
-    };
-
-    ws.onmessage = (event) => {
-      addMessage("📩 " + event.data);
-    };
+    ws.onopen = () => addMessage("✅ Conectado al servidor");
+    ws.onmessage = (event) => addMessage("📩 " + event.data);
 
     function sendMessage() {
       const input = document.getElementById("msg");
@@ -43,3 +38,4 @@
   </script>
 </body>
 </html>
+
