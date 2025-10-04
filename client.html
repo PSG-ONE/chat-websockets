@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>P2P Chat</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #111; color: #eee; padding: 20px; }
+    #messages { border: 1px solid #444; height: 300px; overflow-y: auto; padding: 10px; margin-bottom: 10px; }
+    input { width: 80%; padding: 10px; }
+    button { padding: 10px; }
+  </style>
+</head>
+<body>
+  <h2>💬 P2P Chat en Render</h2>
+  <div id="messages"></div>
+  <input id="msg" type="text" placeholder="Escribe un mensaje..." />
+  <button onclick="sendMessage()">Enviar</button>
+
+  <script>
+    const ws = new WebSocket("wss://p2p-chat-tdde.onrender.com");
+
+    ws.onopen = () => {
+      addMessage("✅ Conectado al servidor");
+    };
+
+    ws.onmessage = (event) => {
+      addMessage("📩 " + event.data);
+    };
+
+    function sendMessage() {
+      const input = document.getElementById("msg");
+      if (input.value) {
+        ws.send(input.value);
+        input.value = "";
+      }
+    }
+
+    function addMessage(msg) {
+      const div = document.getElementById("messages");
+      div.innerHTML += "<p>" + msg + "</p>";
+      div.scrollTop = div.scrollHeight;
+    }
+  </script>
+</body>
+</html>
